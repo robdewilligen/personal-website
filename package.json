@@ -1,0 +1,30 @@
+{
+    "name": "personal-website",
+    "author": "Rob de Willigen",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "watch": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@vee-validate/rules": "^4.7.3",
+        "boxicons": "^2.1.4",
+        "element-plus": "^2.2.26",
+        "lodash": "^4.17.21",
+        "normalize.css": "^8.0.1",
+        "sass": "^1.56.2",
+        "vee-validate": "^4.7.3",
+        "vue": "^3.2.45",
+        "vue-class-component": "^8.0.0-rc.1",
+        "vue-router": "^4.1.6",
+        "vuex": "^4.0.2"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.0.0",
+        "vite": "^4.0.0"
+    }
+}
