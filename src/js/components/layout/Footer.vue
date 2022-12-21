@@ -19,4 +19,4 @@ export default Options({
 )
 </script>
 
-<style src="@/scss/layout/footer.scss" lang="scss" />
+<style src="@/scss/layout/Footer.scss" lang="scss" />

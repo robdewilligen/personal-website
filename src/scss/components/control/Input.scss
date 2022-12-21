@@ -1,0 +1,31 @@
+.input-view {
+    display: flex;
+
+    div.prefix, div.suffix {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 .75rem;
+    }
+
+    input.rw-input {
+        display: inline-flex;
+        width: 100%;
+        min-height: 2rem;
+        border: none;
+        background: rgba(255, 255, 255, 0.15);
+
+        align-items: center;
+        overflow: hidden;
+        font-size: 1.5rem;
+        outline: 0;
+
+        &::placeholder {
+            color: rgba(44, 44, 44, 0.63);
+        }
+
+        &:focus {
+            border-bottom: rgb(47, 105, 250) 2px solid;
+        }
+    }
+}

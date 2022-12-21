@@ -1,0 +1,23 @@
+:root {
+    //Font
+    --font-family-primary : "Poppins", sans-serif;
+    --font-size-heading-primary: 2rem;
+
+    //Color
+    --rw-color-primary: green;
+    --rw-color-secondary: #254225;
+    --rw-color-other: #6e6e6e;
+    --rw-color-utility: #264383;
+    --rw-color-negative: red;
+
+    --underline-button-color: rgba(73, 73, 73, 0.22);
+
+    //Grid
+    --rw-grid-columns: 12;
+    --rw-grid-gap: 1.5rem;
+    --rw-grid-column-gap: var(--rw-grid-gap);
+    --rw-grid-row-gap: var(--rw-grid-gap);
+
+    //Link
+    --rw-link-font-size: 1.3rem;
+}

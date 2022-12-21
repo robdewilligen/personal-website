@@ -1,0 +1,14 @@
+.rw-link {
+    cursor: pointer;
+    font-size: var(--rw-link-font-size);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &.disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
+}

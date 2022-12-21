@@ -1,0 +1,12 @@
+div.rw-button {
+    color: #fff;
+    background-color: var(--rw-color-utility);
+    border-radius: 25px;
+    padding: 1.5rem 2rem;
+    font-size: var(--font-size-heading-primary);
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+}

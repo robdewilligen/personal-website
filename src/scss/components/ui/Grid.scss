@@ -1,0 +1,54 @@
+div.rw-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--rw-grid-columns), 1fr);
+    grid-gap: var(--rw-grid-gap);
+    grid-column-gap: var(--rw-grid-column-gap);
+    grid-row-gap: var(--rw-grid-row-gap);
+
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            grid-column: auto/span $i;
+        }
+    }
+
+    .col-align-fill > * {
+        width: 100%;
+    }
+
+    .col-align-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-align-center-x {
+        display: flex;
+        justify-content: center;
+    }
+
+    .col-align-left-x {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .col-align-right-x {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .col-align-top-y {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .col-align-center-y {
+        display: flex;
+        align-items: center;
+    }
+
+    .col-align-bottom-y {
+        display: flex;
+        align-items: flex-end;
+    }
+
+}

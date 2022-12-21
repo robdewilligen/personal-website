@@ -1,0 +1,60 @@
+div.rw-stack {
+    position: relative;
+
+    color: #fff;
+    font-size: var(--font-size-heading-primary);
+
+    div.stack-heading:hover {
+
+        cursor: pointer;
+    }
+
+    div.stack-block {
+
+        position: absolute;
+        top: 5.5rem;
+
+        background-color: #fff;
+        padding: 2rem;
+        margin: 1rem 0;
+
+        display: grid;
+        gap: 1rem;
+        border-radius: 5px;
+
+        div.stack-item {
+            padding: 0;
+            min-width: 20rem;
+            gap: 1rem;
+
+            span {
+                color: black;
+            }
+        }
+
+        div.stack-item:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+
+        div.stack-item:after {
+            content: '';
+            display: block;
+            margin: auto;
+            height: 2px;
+            width: 0;
+            background: transparent;
+            transition: width .3s ease, background-color .2s ease;
+        }
+
+        div.stack-item:hover:after {
+            width: 100%;
+            background: var(--underline-button-color);
+        }
+
+    }
+}
+
+div.stack-view:hover {
+    cursor: grab;
+}

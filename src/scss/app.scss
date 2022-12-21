@@ -1,77 +1,84 @@
 @import "normalize.css";
 @import "boxicons";
+@import "@/scss/var.scss";
 
 :root {
-  // Default browser font-size = 16px
-  // 62,5% of 16px is 10px
-  // Result: 1rem = 10px
+    // Default browser font-size = 16px
+    // 62,5% of 16px is 10px
+    // Result: 1rem = 10px
 
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 html,
 body {
-  width: 100%;
-  height: 100%;
-  -webkit-font-smoothing: antialiased;
-  background-color: #ddd;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    background-color: #ddd;
 
-  * {
-    box-sizing: border-box;
-  }
+    * {
+        box-sizing: border-box;
+    }
 }
 
 #app {
-  width: 100%;
-  height: 100%;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1.4rem;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+    font-size: 1.4rem;
 
-  strong {
-    font-weight: 700;
-  }
+    strong {
+        font-weight: 700;
+    }
 }
 
 #app-template {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 
 // Typo
 h1 {
-  margin: 0;
-  color: white;
+    display: inline-block;
+    margin: 0;
+    color: white;
 }
 
 h2 {
-  margin: 0 0 .7rem;
-  font-size: 1.8rem;
+    margin: 0 0 .7rem;
+    font-size: 1.8rem;
 }
 
 h3 {
-  margin: 0;
-  color: black;
+    margin: 0;
+    color: black;
 }
 
 p {
-  margin: 0;
+    margin: 0;
 }
 
 div.error-page {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  h1 {
-    margin: 0 0 2rem;
-  }
+    h1 {
+        margin: 0 0 2rem;
+    }
 
-  p {
-    color: #fff;
-  }
+    p {
+        color: #fff;
+    }
+}
+
+//Utility
+.shadow {
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.25);
 }
