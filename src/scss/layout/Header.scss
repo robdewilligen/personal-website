@@ -1,21 +1,55 @@
 div.header-view {
-
+    visibility: hidden;
     background-color: var(--rw-color-primary);
+    position: fixed;
+    top: 0;
 
-    height: 8%;
     width: 100%;
-    padding: 0 15%;
+    padding: 0 15vw;
 
     display: flex;
     justify-content: space-around;
     align-items: center;
 
     div.header-links {
-
         display: flex;
         justify-content: space-around;
         align-items: center;
 
         gap: 2vw;
+    }
+
+    &.show {
+        animation: slideIn .3s;
+        height: 8%;
+        visibility: visible;
+    }
+
+    &.hide {
+        animation: slideOut .3s;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        height: 0;
+        visibility: hidden;
+    }
+    to {
+        height: 8%;
+        visibility: visible;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        height: 8%;
+        visibility: visible;
+    }
+    to {
+        height: 0;
+        visibility: hidden;
     }
 }

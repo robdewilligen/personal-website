@@ -2,7 +2,11 @@
 
     <div class="error-page">
         <h1>Deze pagina bestaat niet</h1>
-        <p>Neem contact op met Rob de Willigen wanneer deze melding zich blijft voordoen.</p>
+        <div>
+            <p>Neem contact op met </p>
+            <a href="mailto: robdewilligen@outlook.com"> Rob de Willigen </a>
+            <p> wanneer deze melding zich blijft voordoen.</p>
+        </div>
     </div>
 
 </template>

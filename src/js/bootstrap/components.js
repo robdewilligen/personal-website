@@ -5,7 +5,7 @@ import {
 
 //Layout
 import {
-Footer, Header
+Footer, Header, Capital
 } from '@/js/components/layout';
 
 export default async function (app) {
@@ -27,5 +27,6 @@ export default async function (app) {
     // Layout
     app.component(Header.name, Header);
     app.component(Footer.name, Footer);
+    app.component(Capital.name, Capital);
 
 }

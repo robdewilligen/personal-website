@@ -4,6 +4,7 @@ div.rw-button {
     border-radius: 25px;
     padding: 1.5rem 2rem;
     font-size: var(--font-size-heading-primary);
+    min-height: 1rem;
 
     &:hover {
         cursor: pointer;

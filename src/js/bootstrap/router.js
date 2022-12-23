@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import AppTemplate from "@/js/components/AppTemplate.vue";
 import Error from "@/js/components/Error.vue";
+
 import Home from "@/js/components/route/Home.vue";
 
 export default function (app) {

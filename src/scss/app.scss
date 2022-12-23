@@ -71,10 +71,22 @@ div.error-page {
 
     h1 {
         margin: 0 0 2rem;
+        color: #000;
     }
 
-    p {
-        color: #fff;
+    > div {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+
+        a {
+            font-size: 1.4rem;
+            text-decoration: none;
+        }
+
+        p {
+            color: #000;
+        }
     }
 }
 

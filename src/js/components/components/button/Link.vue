@@ -1,47 +1,40 @@
 <template>
 
-    <router-link v-if="routeObject" :to="routeObject" class="rw-link" :class="{ disabled }" ref="a"
+    <router-link v-if="routeObject" class="rw-link" :to="routeObject" :class="{ disabled }" ref="a"
                  @click="onClick" :data-action="action">
 
-        <div class="link-icon" v-if="iconVisible">
+        <div v-if="iconVisible">
             <i :class="icon">
                 <slot name="icon"></slot>
             </i>
         </div>
-
-        <slot></slot>
-
     </router-link>
 
-    <a v-else :href="href || '#'" ref="a"
-       class="rw-link" :class="{ disabled }"
+    <a v-else class="rw-link" :href="href || '#'" ref="a"
+       :class="{ disabled, silent }"
        @click="onClick" :data-action="action">
-
-        <div class="link-icon" v-if="iconVisible">
-            <i :class="icon">
-                <slot name="icon"></slot>
-            </i>
+        <div>
+            <i :class="logo"/>
+            <slot></slot>
         </div>
-
-        <slot></slot>
     </a>
 
 </template>
 
 <script>
 
-import { Vue, Options } from 'vue-class-component';
+import { Options, Vue } from 'vue-class-component';
 
 export default Options({
     name: 'Link',
     props: {
-        icon: String,
+        logo: String,
+        href: String,
         route: String,
         to: Object,
-        href: String,
         action: String,
         disabled: [Boolean, Number],
-        hideIcon: [Boolean, Number]
+        silent: Boolean,
     },
     emits: ['click']
 })(
@@ -81,13 +74,8 @@ export default Options({
 
             this.$emit('click', e);
         }
-
-        get iconVisible(){
-
-            return (this.icon || this.$slots.icon) && !this.hideIcon;
-        }
     }
-);
-
+)
 </script>
-<style src="@/scss/components/button/Link.scss" lang="scss"></style>
+
+<style src="@/scss/components/button/Link.scss" lang="scss"/>

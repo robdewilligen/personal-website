@@ -1,8 +1,9 @@
 <template>
     <div class="app-view">
-        App
-    </div>
+        <Capital />
 
+
+    </div>
 </template>
 
 <script>
@@ -19,3 +20,5 @@ export default Options({
 );
 
 </script>
+
+<style src="@/scss/route/Home.scss" lang="scss" />

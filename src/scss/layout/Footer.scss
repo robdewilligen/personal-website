@@ -1,8 +1,32 @@
 .footer-view {
-
-    background-color: green;
-    height: 100px;
+    background-color: var(--rw-color-tertiary);
+    height: 15%;
     width: 100%;
-    position: absolute;
     bottom: 0;
+    color: white;
+    padding: 0 15vw;
+    display: flex;
+    justify-content: space-between;
+
+    .link-group {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        column-gap: 5rem;
+        max-height: 90%;
+        width: 25%;
+        padding: 5px 0;
+
+        .rw-link {
+            font-size: 1.4rem;
+
+            &:hover {
+                scale: 1;
+            }
+        }
+    }
+
+    .about-me {
+        max-width: 25%;
+    }
 }

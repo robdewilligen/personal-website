@@ -10,6 +10,8 @@
             <div class="stack-item" @click="action" v-for="option in options">
                 <span>{{ option.label }}</span>
             </div>
+
+            <rw-link :href="href"></rw-link>
         </div>
 
     </div>
