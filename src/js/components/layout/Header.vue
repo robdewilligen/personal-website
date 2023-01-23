@@ -1,24 +1,10 @@
 <template>
-    <div class="header-view">
-        Header
+    <div ref="header" class="header-view">
+        <h1>Rob de Willigen</h1>
         <div class="header-links">
-
-            <rw-dropdown>Stack</rw-dropdown>
-
-<!--            <el-dropdown @command="goToStackItem">-->
-<!--                <span class="el-dropdown-link">-->
-<!--                  Stack<el-icon class="el-icon&#45;&#45;right"><arrow-down /></el-icon>-->
-<!--                </span>-->
-<!--                <template #dropdown>-->
-<!--                    <el-dropdown-menu>-->
-<!--                        <el-dropdown-item command="Vue">Vue.js</el-dropdown-item>-->
-<!--                        <el-dropdown-item command="Laravel">Laravel</el-dropdown-item>-->
-<!--                        <el-dropdown-item command="c">Action 3</el-dropdown-item>-->
-<!--                        <el-dropdown-item command="d" disabled>Action 4</el-dropdown-item>-->
-<!--                        <el-dropdown-item command="e" divided>Action 5</el-dropdown-item>-->
-<!--                    </el-dropdown-menu>-->
-<!--                </template>-->
-<!--            </el-dropdown>-->
+            <rw-link class="rw-link-button">Nieuws</rw-link>
+            <rw-stack :action="scrollToValue" :options="stackOptions">Stack</rw-stack>
+            <rw-button>Stuur een bericht</rw-button>
         </div>
 
     </div>
@@ -28,14 +14,64 @@
 
 import { Options, Vue } from 'vue-class-component';
 
+//Enums & Filters
+import { StackFilter } from '@rw/common/filters/index.js'
+import { StackType } from '@rw/common/enums/index.js'
+
 export default Options({
 
     name: 'Header',
+    watch: {}
 })(
     class Header extends Vue {
+
+        didScroll = false;
+
+        get stackOptions(){
+
+            return Object.values(StackType).map(value => ({
+
+                label: StackFilter(value),
+                value
+            }));
+        }
+
+        // Animated Header
+        created(){
+            window.addEventListener('scroll', () => {
+                if(!this.didScroll){
+                    this.didScroll = true;
+                    setTimeout(this.scrollPage, 100);
+                }
+            }, false);
+        }
+
+        scrollPage(){
+            if(this.scrollY() >= 100){
+                // Show
+                this.$refs.header.classList.remove('hide');
+                this.$refs.header.classList.add('show');
+            }
+            else {
+                // Hide
+                this.$refs.header.classList.remove('show')
+                this.$refs.header.classList.add('hide')
+            }
+
+            this.didScroll = false;
+        }
+
+        scrollY(){
+            return window.pageYOffset || document.documentElement.scrollTop;
+        }
+
+        scrollToValue(){
+
+            //TODO: Scroll to the element containing ID equal to value (scroll to id= vue.js/scroll to id= laravel)
+        }
 
     }
 )
 </script>
 
-<style src="@/scss/layout/header.scss" lang="scss" />
+<style src="@/scss/layout/Header.scss" lang="scss"/>
