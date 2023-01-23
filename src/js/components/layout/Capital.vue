@@ -5,7 +5,7 @@
             <img class="shadow" src="/img/rw.png" alt="profile-picture" >
             <h2>Rob de Willigen</h2>
             <div class="social-links">
-                <rw-link v-for="(item) in socials" :logo="item.icon" :href="item.link" />
+                <rw-link v-for="(item) in socials" :logo="item.icon" :href="item.link" target="_blank" />
             </div>
         </div>
 
