@@ -2,7 +2,6 @@
     <div class="app-view">
         <Capital />
 
-
     </div>
 </template>
 
