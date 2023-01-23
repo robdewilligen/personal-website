@@ -35,7 +35,7 @@ export default Options({
             {
                 name: "Whatsapp",
                 icon: "bx bxl-whatsapp",
-                link: "https://wa.me/0629859380"
+                link: "https://wa.me/629859380"
             },
             {
                 name: "Instagram",
